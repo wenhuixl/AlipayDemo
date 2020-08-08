@@ -1,0 +1,29 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    cache: false
+---
+server:
+  servlet:
+    session:
+      timeout: 30
+  port: 8080
+  ##tomcat.max-threads: 0
+  tomcat.uri-encoding: UTF-8
+
+  #上传文件大小不限制
+  # spring.servlet.multipart.max-file-size=-1
+  #spring.servlet.multipart.max-request-size=-1
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  mvc:
+    favicon:
+      enabled: false
+
